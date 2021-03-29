@@ -7,11 +7,11 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
-
 import { Game } from '../../games/entities/Game';
 
+
 @Entity('users')
-export class User {
+class User {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
@@ -34,3 +34,5 @@ export class User {
   @UpdateDateColumn()
   updated_at: Date;
 }
+
+export {User}
